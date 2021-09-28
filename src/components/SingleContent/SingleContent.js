@@ -1,6 +1,7 @@
 import { Badge } from "@material-ui/core";
 import { img_300, unavailable } from "../../config/config";
-import ContentModal from "../../components/ContentModal/ContentModal";
+import "./SingleContent.css";
+import ContentModal from "../ContentModal/ContentModal";
 
 const SingleContent = ({
   id,
