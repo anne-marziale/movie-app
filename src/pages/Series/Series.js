@@ -19,17 +19,18 @@ const Series = () => {
     );
     setContent(data.results);
     setNumOfPages(data.total_pages);
+    // console.log(data);
   };
 
   useEffect(() => {
     window.scroll(0, 0);
     fetchSeries();
+    // eslint-disable-next-line
   }, [genreforURL, page]);
-
 
   return (
     <div>
-      <span className="pageTitle"> TV Series</span>
+      <span className="pageTitle">Discover Series</span>
       <Genres
         type="tv"
         selectedGenres={selectedGenres}
@@ -38,7 +39,7 @@ const Series = () => {
         setGenres={setGenres}
         setPage={setPage}
       />
-        <div className="trending">
+      <div className="trending">
         {content &&
           content.map((c) => (
             <SingleContent
