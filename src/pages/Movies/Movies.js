@@ -12,7 +12,6 @@ const Movies = () => {
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
   const genreforURL = useGenre(selectedGenres);
-  // console.log(selectedGenres);
 
   const fetchMovies = async () => {
     const { data } = await axios.get(
@@ -25,7 +24,6 @@ const Movies = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchMovies();
-    // eslint-disable-next-line
   }, [genreforURL, page]);
 
   return (
